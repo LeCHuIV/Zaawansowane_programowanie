@@ -57,7 +57,7 @@ class Produkt:
         self.cena = value
 
 class Magazyn:
-    def __init__(self,Nazwa,Numer,Kraj,Miasto,Kod):
+    def __init__(self,Nazwa,Numer,Kraj,Miasto, Kod):
         self.nazwa=Nazwa
         self.numer=Numer
         self.kraj=Kraj
