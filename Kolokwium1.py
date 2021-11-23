@@ -70,27 +70,16 @@ class Magazyn:
     def nazwa(self) -> str:
         return self.nazwa
 
-    @nazwa.setter
-    def nazwa(self, value):
-        self.nazwa = value
 
     @property
     def kraj(self) -> str:
         return self.kraj
 
-    @kraj.setter
-    def kraj(self, value):
-        self.kraj = value
 
 
     @property
     def numer(self) -> int:
         return self.numer
-
-
-    @numer.setter
-    def numer(self,value):
-        self.numer=value
 
 
     @property
@@ -111,6 +100,19 @@ class Magazyn:
     @kod.setter
     def kod(self,value):
         self.kod=value
+
+    @nazwa.setter
+    def nazwa(self, value):
+        self._nazwa = value
+
+    @numer.setter
+    def numer(self, value):
+        self._numer = value
+
+    @kraj.setter
+    def kraj(self, value):
+        self._kraj = value
+
 
 class KlientDetaliczny:
     def __init__(self,Nazwa,Adres,Miasto,Rabat,Kraj):
@@ -168,7 +170,9 @@ class KlientDetaliczny:
 
 
 class Zamowienie(Magazyn, Produkt, KlientDetaliczny):
-    def __init__(self,Numer,Opiekun,Klient : KlientDetaliczny,Magazyn : Magazyn,Produkt : Produkt):
+    def __init__(self, Numer, Opiekun, Klient: KlientDetaliczny, Magazyn: Magazyn, Produkt: Produkt, Nazwa, Kraj,
+                 Miasto, Kod):
+        super().__init__(Nazwa, Numer, Kraj, Miasto, Kod)
         self.numer=Numer
         self.opiekun=Opiekun
         self.klient=Klient
@@ -263,3 +267,7 @@ class KlientBiznesowy:
     @property
     def kraj(self) -> str:
         return self.kraj
+
+    @kraj.setter
+    def kraj(self, value):
+        self._kraj = value
