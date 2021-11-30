@@ -7,7 +7,7 @@ from Cwiczenia7.Klasa import Movie
 from Cwiczenia7.Linki import Linki
 from Cwiczenia7.rating import Rating
 from Cwiczenia7.Tagi import Tags
-from flask import url_for
+
 
 app = Flask(__name__)
 api = Api(app)
