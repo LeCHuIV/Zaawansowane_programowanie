@@ -9,6 +9,7 @@ from rating import Rating
 from Tagi import Tags
 from flask import url_for
 
+
 app = Flask(__name__)
 api = Api(app)
 
