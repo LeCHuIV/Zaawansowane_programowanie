@@ -2,11 +2,11 @@ import json
 
 from flask import Flask
 from flask_restful import Resource, Api
-from Import import read_file
-from Klasa import Movie
-from Linki import Linki
-from rating import Rating
-from Tagi import Tags
+from Cwiczenia7.Import import read_file
+from Cwiczenia7.Klasa import Movie
+from Cwiczenia7.Linki import Linki
+from Cwiczenia7.rating import Rating
+from Cwiczenia7.Tagi import Tags
 from flask import url_for
 
 app = Flask(__name__)
